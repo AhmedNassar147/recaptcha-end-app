@@ -7,6 +7,10 @@ app.use(cors());
 
 const SERVER_SECRET = "6Lf-j3ErAAAAAMm0gieSgBwJbPPb4sMU4Vm7FokD";
 
+app.get("/", (req, res) => {
+  res.send("Hello World!");
+});
+
 app.post("/verify-recaptcha", async (req, res) => {
   try {
     const { token } = req.body;
